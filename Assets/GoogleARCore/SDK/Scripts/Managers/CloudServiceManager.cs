@@ -62,6 +62,20 @@ namespace GoogleARCoreInternal.CrossPlatform
             return task;
         }
 
+        public GoogleARCore.AsyncTask<CloudAnchorResult> CreateCloudAnchor(IntPtr nativeAnchorPtr)
+        {
+            Action<CloudAnchorResult> onComplete;
+            GoogleARCore.AsyncTask<CloudAnchorResult> task;
+            if (!_CreateCloudAnchorResultAsyncTask(out onComplete, out task))
+            {
+                return task;
+            }
+
+            _CreateCloudAnchor(onComplete, nativeAnchorPtr);
+
+            return task;
+        }
+
         public GoogleARCore.AsyncTask<CloudAnchorResult> CreateCloudAnchor(UnityEngine.Pose pose)
         {
             Action<CloudAnchorResult> onComplete;

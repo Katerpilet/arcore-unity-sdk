@@ -21,6 +21,7 @@
 namespace GoogleARCore.CrossPlatform
 {
     using GoogleARCoreInternal.CrossPlatform;
+    using System;
     using UnityEngine;
 
 #if ARCORE_IOS_SUPPORT
@@ -42,6 +43,11 @@ namespace GoogleARCore.CrossPlatform
         public static AsyncTask<CloudAnchorResult> CreateCloudAnchor(Anchor anchor)
         {
             return CloudServiceManager.Instance.CreateCloudAnchor(anchor);
+        }
+
+        public static AsyncTask<CloudAnchorResult> CreateCloudAnchor(IntPtr nativeAnchorPtr)
+        {
+            return CloudServiceManager.Instance.CreateCloudAnchor(nativeAnchorPtr);
         }
 
 #if ARCORE_IOS_SUPPORT
