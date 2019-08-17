@@ -1,0 +1,17 @@
+{
+    "name": "GoogleARCore.SDK.InstantPreview.Editor",
+    "references": [
+        "GUID:b096102d4e7904d4dbff3dbfd73da46a"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
